@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Solo Space</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	    <div style="width: 2560px; height: 65px;" class="header">
+        <div
+            style="width: 2560px; height: 65px; position: absolute; left: -0.5px; top: 0px; background: rgba(0, 0, 0);"></div>
+        <a href="#" onclick="openDesignIntroduction()" style=" position: absolute; left: 1850px; top: 20px; font-size: 20px; text-align: center; color: #fff;">
+            ABOUT
+        </a>
+        <a href="#" onclick="openIdea()" style="position: absolute; left: 1970px; top: 20px; font-size: 20px; text-align: center; color: #fff;">
+            아이디어
+        </a>
+        <a href="#" onclick="openEstimate()" style="position: absolute; left: 2110px; top: 20px; font-size: 20px; text-align: center; color: #fff;">
+            견적내기
+        </a>
+        <a href="#" onclick="openQA()" style="position: absolute; left: 2250px; top: 20px; font-size: 20px; text-align: center; color: #fff;">
+            Q&A
+        </a>
+        <p
+            style="width: 220px; height: 60px; position: absolute; left: 120px; top: -20px; font-size: 32px; text-align: center; color: #fff;">
+            SoloSpace
+        </p>
+    </div>
+    
+	<div style="width: 1531px; height: 354px;">
+		<p class="ripple-effect"
+			style="width: 710px; height: 265px; position: absolute; left: 119px; top: 467px; text-align: left; color: #fff;">
+			<span
+				style="width: 710px; height: 265px; font-size: 48px; text-align: left; color: #fff;">우리는
+				본질적인 가치를</span><br />
+			<span
+				style="width: 710px; height: 265px; font-size: 48px; text-align: left; color: #fff;">제공합니다</span><br />
+			<br />
+			<span
+				style="width: 710px; height: 265px; font-size: 28px; text-align: left; color: #fff;">당신의
+				집에 가치를 더합니다 </span><br />
+			<span
+				style="width: 710px; height: 265px; font-size: 28px; text-align: left; color: #fff;">우리는
+				소중한 가치와 행복을 디자인에 담을 것입니다</span>
+		</p>
+		<div class="slider3">
+        		<div class="slide3">
+					<img src="img/6963bf0acc047.jpg"
+						style="width: 500px; height: 500px; position: absolute; left: 1650px; top: 300px; object-fit: cover;">
+				</div>
+				<div class="slide3">
+					<img src="img/4215ed3f74868.jpg"
+						style="width: 500px; height: 500px; position: absolute; left: 1650px; top: 300px; object-fit: cover;" />
+				</div>
+				<div class="slide3">
+					<img src="img/6b5430c36081d.jpg"
+						style="width: 500px; height: 500px; position: absolute; left: 1650px; top: 300px; object-fit: cover;" />
+				</div>
+			</div>
+	</div>
+	<div style="width: 2560px; height: 660px;">
+		<div
+			style="width: 2560px; height: 660px; position: absolute; left: 0px; top: 920px; background: rgba(137, 137, 137);"></div>
+		<p
+			style="width: 692px; height: 240; position: absolute; left: 1600px; top: 1000px; text-align: right; color: #fbf7f7;">
+			<span
+				style="width: 692px; height: 240; font-size: 96px; text-align: right; color: #fbf7f7;">FURNITURE
+				ESTIMATE</span><br />
+			<br />
+			<span
+				style="width: 692px; height: 240; font-size: 40px; text-align: right; color: #fbf7f7;">나만의
+				특별한 집을 만들어보세요
+				</span><br />
+			<br />
+			<br />
+		</p>
+		 <a href="#" id="estimate-link" onclick="openEstimate()"
+			style="position: absolute; left: 2150px; top: 1400px; font-size: 32px; text-align: right; color: #fffbfb;">
+			견적 내기</a>
+		<div class="img-container">
+    		<img src="img/363362aef2f29.jpg" style="width: 1500px; height: 660px; object-fit: cover;" />
+    		<div class="img-overlay"></div>
+		</div>
+	</div>
+	<div style="width: 2560px; height: 660px;">
+    <div style="width: 2560px; height: 660px; position: absolute; left: 0px; top: 1580px; background: #fff;"></div>
+    <img id="image1" src="img/5bd7eb8692e00.jpg" style="width: 400px; height: 450px; position: absolute; left: 1525px; top: 1614.5px; object-fit: cover;" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" />
+    <img id="image2" src="img/5bd7fa46a1734.jpg" style="width: 400px; height: 250px; position: absolute; left: 1050px; top: 1614.5px; object-fit: cover;" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" />
+    <img id="image3" src="img/4e5bc4f6c1d7a.jpg" style="width: 400px; height: 550px; position: absolute; left: 2000px; top: 1614.5px; object-fit: cover;" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" />
+    <p style="width: 621px; height: 268px; position: absolute; left: 200px; top: 1650px; text-align: left; color: #000;">
+        <span style="width: 621px; height: 268px; font-size: 96px; text-align: left; color: #000;">Company Introduction</span><br /><br />
+    </p>
+    <p style="width: 882px; height: 174px; position: absolute; left: 200px; top: 1950px; font-size: 40px; text-align: left; color: #000;">
+        <span style="width: 882px; height: 174px; font-size: 40px; text-align: left; color: #000;">SoloSpace</span><br />
+        <span style="width: 882px; height: 174px; font-size: 40px; text-align: left; color: #000;">나만의 세계, 나만의 공간</span>
+    </p>
+		 <a href="#" onclick="openDesignIntroduction()" class="custom-underline">
+        더 자세히 알아보기
+    	</a>
+	</div>
+	<div style="width: 2560px; height: 660px;">
+		<div
+			style="width: 2560px; height: 660px; position: absolute; left: 0px; top: 2240px; background: rgba(137, 137, 137);"></div>
+			<div class="slider">
+        		<div class="slide">
+					<img src="img/main.jpg"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 2400px; object-fit: cover;">
+				</div>
+				<div class="slide">
+					<img src="img/20211012180005b6TTm8jhRu.jpeg"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 2400px; object-fit: cover;" />
+				</div>
+				<div class="slide">
+					<img src="img/oneroom3.avif"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 2400px; object-fit: cover;" />
+				</div>
+				<div class="slide">
+					<img src="img/tworoom8.avif"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 2400px; object-fit: cover;" />
+				</div>
+				<div class="slide">
+					<img src="img/office_tel9.jpg"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 2400px; object-fit: cover;" />
+				</div>
+				<div class="slide">
+					<img src="img/oneroom6.avif"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 2400px; object-fit: cover;" />
+				</div>
+				
+			</div>
+			 <a href="#" 
+			style="width: 617px; height: 75.4px; position: absolute; left: 850px; top: 2280px; font-size: 60px; text-align: center; color: #fff;">
+			베스트 가구 인테리어</a>
+		</div>
+		
+
+	<div style="width: 2560px; height: 660px;">
+		<div
+			style="width: 2560px; height: 660px; position: absolute; left: 0px; top: 2880px; background: rgba(255, 255, 255);"></div>
+			<div class="slider">
+        		<div class="slide2">
+					<img src="img/tworoom10.avif"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 3050px; object-fit: cover;" />
+				</div>
+				<div class="slide2">
+					<img src="img/tworoom11.avif"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 3050px; object-fit: cover;" />
+				</div>
+				<div class="slide2">
+					<img src="img/005.jpg" 
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 3050px; object-fit: cover;" />
+				</div>
+				<div class="slide2">
+					<img src="img/office_tel7.jpg"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 3050px; object-fit: cover;" />
+				</div>
+				<div class="slide2">
+					<img src="img/office_tel4.jpg"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 3050px; object-fit: cover;" />
+				</div>
+				<div class="slide2">
+					<img src="img/oneroom.jpg"
+						style="width: 400px; height: 400px; position: absolute; left: 950px; top: 3050px; object-fit: cover;" />
+				</div>
+			</div>	
+		    <a href="#" onclick="openIdea()" class="underline"
+			style="width: 617px; height: 75.4px; position: absolute; left: 850px; top: 2925px; font-size: 64px; text-align: center; color: #0c0b0b;">
+			홈스타일링 아이디어</a>
+	</div>
+	 <script src="js/script.js"></script>
+	<script src="js/open.js"></script>
+</body>
+</html>

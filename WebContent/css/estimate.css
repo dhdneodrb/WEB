@@ -1,0 +1,203 @@
+body {
+    background-color: rgb(255, 255, 255); /* 바탕화면을 검은색으로 설정 */
+}
+.header {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0);
+    display: flex;
+    justify-content: flex-start; /* 선택지를 왼쪽으로 정렬 */
+    align-items: center;
+    padding-left: 0px; /* 선택지와 헤더 사이 여백 조절 */
+    padding-right: 10px; /* 오른쪽 여백 추가 */
+}
+
+.header select {
+    height: 50px;
+    font-size: 18px;
+    width: 300px;
+    border: none;
+    background-color: rgba(0, 0, 0);
+    color: white;
+    margin-right: 100px; /* 각 요소간의 간격 설정 */
+}
+
+.header a {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 150px; /* 각 요소간의 간격 설정 */
+    text-decoration: none; /* 링크에 밑줄 제거 */
+}
+
+.header a:last-child {
+    margin-right: 0; /* 마지막 요소의 우측 여백 제거 */
+}
+
+/* 슬라이드 컨테이너 스타일 */
+.slider-container {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    width: 300px;
+    background-color: #000000;
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    max-height: calc(100vh - 65px); /* 화면 높이에서 헤더의 높이를 뺀 값으로 설정 */
+    transition: width 0.5s;
+}
+
+/* 슬라이드 컨테이너 활성화 스타일 */
+.slider-container.active {
+    width: 300px; /* 선택 영역 확장 너비 */
+}
+
+/* 선택 영역 스타일 */
+.size-type, .next-button, .structure-type , .interior-type, .category-type{
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#whiteOptions,
+#blackOptions,
+#brownOptions {
+    position: absolute;
+    top: 0; /* 슬라이드 컨테이너의 맨 위에 위치하도록 설정 */
+    right: 0;
+    width: 300px;
+    background-color: #000000;
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    max-height: calc(100vh - 65px); /* 화면 높이에서 헤더의 높이를 뺀 값으로 설정 */
+    transition: width 0.5s;
+}
+#bedOptions,
+#chairOptions,
+#tableOptions,
+#curtenOptions,
+#carpetOptions,
+#tableOptions {
+    background-color: grey; /* 배경색 회색으로 변경 */
+    padding: 5px; /* 내부 여백 설정 */
+    margin-top: 5px; /* 위쪽 여백 설정 */
+}
+
+/* 가구 선택 영역의 카테고리 타입 */
+.category-type {
+    color: white; /* 기존에 정의된 색상 사용 */
+}
+
+/* 가구 선택 영역의 furniture-type */
+.furniture-type {
+    color: white; /* 텍스트 색상을 흰색으로 변경 */
+    background-color: grey; /* 배경색 회색으로 변경 */
+    padding: 5px; /* 내부 여백 설정 */
+    margin-top: 5px; /* 위쪽 여백 설정 */
+    display: block; /* 각 가구 선택지들을 블록 요소로 표시 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+.size-type:hover, .next-button:hover, .structure-type:hover, .interior-type:hover, .category-type:hover {
+    background-color: #ffffff;
+    color:#000000;
+}
+.prev-button, .order-button, .ok-button{
+	padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    text-decoration: none;
+    background-color : #ffffff;
+    color: #000000;
+}
+
+.step.active {
+    background-color: #ddd; /* 활성화된 단계의 배경색 */
+    color: #000; /* 활성화된 단계의 텍스트 색상 */
+}
+
+#imageContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* 이미지의 최대 너비를 부모 요소에 맞게 설정 */
+    max-height: 100%; /* 이미지의 최대 높이를 부모 요소에 맞게 설정 */
+}
+
+#imageContainer img {
+    display: block; /* 이미지를 블록 요소로 설정하여 다른 요소와 겹치지 않게 함 */
+    width: 100%; /* 이미지를 부모 요소에 맞추어 너비 조절 */
+    height: auto; /* 비율을 유지한 채로 높이를 자동으로 조절 */
+}
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+         border-radius: 5px;
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color:white;
+        	color: black;
+        }
+
+#selectedOptions {
+    position: fixed;
+    top: 70px; /* 헤더와 슬라이드 컨테이너 아래로 위치하도록 설정 */
+    left: 65px; /* 좌측 여백 추가 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    background-color: rgba(0, 0, 0, 0.7); /* 투명한 검정 배경 추가 */
+    padding: 20px; /* 내부 여백 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* 흰색 그림자 추가 */
+    max-width: 300px; /* 최대 너비 설정 */
+    transition: top 0.5s; /* 위치 전환 시 부드럽게 애니메이션 적용 */
+}
+
+#selectedOptionsList {
+    padding: 0;
+    list-style-type: none; /* 리스트 마커 제거 */
+}
+
+#selectedOptionsList li {
+    margin-bottom: 10px; /* 각 옵션 아래 여백 추가 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    padding: 5px; /* 내부 여백 추가 */
+    background-color: rgba(255, 255, 255, 0.2); /* 투명한 흰색 배경 추가 */
+    border-radius: 5px; /* 모서리를 둥글게 만듦 */
+    transition: background-color 0.3s; /* 배경색 전환 시 부드럽게 애니메이션 적용 */
+}
+
+#selectedOptionsList li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* 호버 시 조금 더 밝은 배경으로 변경 */
+}
+.selected-option {
+    background-color: yellow; /* 선택된 옵션의 배경색을 노란색으로 변경 */
+    border: 2px solid red; /* 선택된 옵션의 테두리를 빨간색으로 변경 */
+}
+.remove-button {
+    background-color: #ff4d4d; /* 배경색을 빨간색으로 설정 */
+    color: black; /* 텍스트 색상을 흰색으로 설정 */
+    border: none; /* 테두리 제거 */
+    padding: 8px 12px; /* 내부 여백 설정 */
+    border-radius: 5px; /* 모서리를 둥글게 만듦 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능한 상태로 표시 */
+    transition: background-color 0.3s; /* 배경색 전환 시 부드럽게 애니메이션 적용 */
+}
+
+.remove-button:hover {
+    background-color: #cc0000; /* 호버 시 조금 더 어두운 빨간색으로 변경 */
+}

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black; /* 페이지 배경색 설정 */
+}
+
+#video-background {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* 동영상이 비디오 요소에 꽉 차도록 설정 */
+	z-index: -1000;
+}
+
+.additional-content,.additional-content3 {
+	position: absolute;
+	width: 100%;
+	background-color: transparent; /* 배경색 설정 */
+	
+	box-sizing: border-box;
+
+}
+
+.additional-content {
+	top: 1300px; /* 화면 하단에서 30px 위에 배치 */
+	height: 400px;
+	font-size: 20px;
+	text-align: center;
+	padding: 100px;
+	background-color: black; /* 배경색 설정 */
+	color: white; /* 텍스트 색상 설정 */
+}
+
+.additional-content3 {
+	top: 2400px; /* 화면 하단에서 830px 위에 배치 */
+	height: 650px;
+	font-size: 16px;
+	padding: 50px;
+	background-color: rgb(128, 64, 64); /* 배경색 설정 */
+	color: white; /* 텍스트 색상 설정 */
+}
+
+.content {
+    width: 710px;
+    height: 265px;
+    font-size: 55px;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 5s ease forwards;
+}
+
+.content2 {
+    width: 710px;
+    height: 265px;
+    font-size: 55px;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 450px); /* 이동 거리를 수정하여 조절합니다 */
+    transform: translate(-50%, -50%);
+    animation: fadeIn 13s ease forwards;
+}
+
+.content3 {
+    width: 710px;
+    height: 265px;
+    font-size: 70px;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    top: 60%; /* 조정된 위치 */
+    left: calc(50% + 200px); /* 이동 거리를 수정하여 조절합니다 */
+    transform: translate(-50%, -50%);
+    animation: fadeIn 25s ease forwards;
+}
+/* fadeIn 애니메이션 설정 */
+@keyframes fadeIn { 
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.slider-container {
+	position: absolute;
+	top: 1680px; /* .additional-content 아래로 조정 */
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+	overflow: hidden;
+	margin-top: 20px; /* 필요에 따라 조절하세요 */
+	background-color: white;
+	width: 100vw; /* 컨테이너의 너비를 뷰포트의 너비로 설정 */
+	height: 700px;
+}
+
+.slider {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.slider-item {
+	flex: 0 0 auto;
+	width: 100%;
+	height: auto;
+	text-align: center; /* 이미지를 가운데로 정렬 */
+}
+
+.slider img {
+	width: 800px; /* 이미지 너비 설정 */
+	height: 700px; /* 이미지 높이 설정 */
+}
+
+
+
+.prev-arrow, .next-arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 100px;
+    color: black;
+    z-index: 1001; /* 다른 요소 위에 배치 */
+    top: 50%; /* 수직 가운데에 배치 */
+}
+
+.prev-arrow {
+    left: 20px; /* 컨테이너의 왼쪽에 배치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬 */
+}
+
+.next-arrow {
+    right: 20px; /* 컨테이너의 오른쪽에 배치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬 */
+}
+
+/* 내비게이션 바에 대한 스타일링 */
+.slider-bars {
+    position: absolute;
+    bottom: 10px; /* 바닥에서 10px 위에 배치 */
+    left: 50%; /* 가로 중앙에 배치 */
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* 너비를 80%로 설정 */
+    z-index: 1001; /* 다른 요소 위에 배치 */
+}
+
+.bar {
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}

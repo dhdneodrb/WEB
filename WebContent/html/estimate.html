@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>견적 내기</title>
+<link rel="stylesheet" href="../css/estimate.css">
+</head>
+<body>
+<div class="header">
+    <div>
+        <select id="roomSelect" onchange="changeRoomType(this.value)">
+            <option value="원룸">원룸</option>
+            <option value="투룸">투룸</option>
+            <option value="오피스텔">오피스텔</option>
+        </select>
+    </div>
+    <div>
+        <a href="#" id="sizeType" class="step" onclick="toggleSlider()">평수 타입</a>
+        <a href="#" id="structureType" class="step" onclick="toggleStructure()">구조 타입</a>
+        <a href="#" id="interiorType" class="step" onclick="toggleInteriorType()">인테리어 타입</a>
+        <a href="#" id="furnitureType" class="step" onclick="toggleFurnitureType()">가구</a>
+    </div>
+</div>
+
+<div id="imageContainer">
+    <img src="" alt="이미지">
+</div>
+
+<div id="sliderContainer" class="slider-container" style="display: none;">
+    <!-- 평수 타입 선택 영역 -->
+    <a href="#" class="size-type" onclick="changeImage('4~6평')">4~6평</a>
+    <a href="#" class="size-type" onclick="changeImage('7~9평')">7~9평</a>
+    <a href="#" class="size-type" onclick="changeImage('10평 이상')">10평 이상</a>
+    <a href="#" class="next-button" onclick="showNextPage()">다음</a> 
+</div>
+
+
+<div id="structureSlider" class="slider-container" style="display: none;">
+    <!-- 구조 타입 선택 영역 -->
+    <a href="#" class="structure-type" onclick="changeStructure('오픈형')">오픈형</a>
+    <a href="#" class="structure-type" onclick="changeStructure('분리형')">분리형</a>
+    <a href="#" class="structure-type" onclick="changeStructure('복층형')">복층형</a>
+    <a href="#" class="next-button" onclick="showNextPage()">다음</a>
+      <a href="#" class="prev-button" onclick="showPreviousPage()">이전</a>
+</div>
+
+<div id="interiorSlider" class="slider-container" style="display: none;">
+    <!-- 인테리어 타입 선택 영역 -->
+    <a href="#" class="interior-type" onclick="changeInterior('화이트톤')">화이트톤</a>
+    <a href="#" class="interior-type" onclick="changeInterior('블랙모노톤')">블랙모노톤</a>
+    <a href="#" class="interior-type" onclick="changeInterior('브라운톤')">브라운톤</a>
+     <a href="#" class="interior-type" onclick="changeInterior('커스텀')">커스텀</a>
+    <a href="#" class="next-button" onclick="showNextPage()">다음</a>
+      <a href="#" class="prev-button" onclick="showPreviousPage()">이전</a>
+</div>
+
+<div id="furnitureSlider" class="slider-container" style="display: none;">
+    <!-- 가구 선택 영역 -->
+    <div id="furnitureOptions">
+        <!-- 가구 선택 옵션은 JavaScript를 통해 동적으로 추가됩니다 -->
+    </div>
+		<a href="#" class="order-button" onclick="placeOrder()">주문하기</a>
+		<a href="#" class="prev-button" onclick="showPreviousPage()">이전</a>
+		<a href="#" class="ok-button" onclick="confirmAndLeave()">확인</a>
+	</div>
+
+<div id="selectedOptions">
+    <h2>선택된 옵션</h2>
+    <table id="selectedOptionsTable">
+        <tr>
+            <th>옵션</th>
+            <th>선택 내역</th>
+            <th>삭제</th>
+        </tr>
+    </table>
+    <div id="totalCost"></div> <!-- 선택된 가구의 총 가격을 표시할 엘리먼트 -->
+</div>
+<script src="../js/estimate.js"></script>
+<script>
+// 해더에 있는 링크 클릭 시 페이지 이동과 동시에 선택된 옵션 초기화
+document.querySelectorAll('.step').forEach(item => {
+    item.addEventListener('click', event => {
+        initialize(); // 페이지 이동 시 초기화
+    });
+});
+</script>
+</body>
+</html>
